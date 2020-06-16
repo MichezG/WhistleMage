@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class MF01 : MonoBehaviour
 {
     private Vector3 mousePosition;
-    public float moveSpeed = 0.1f;
-
+    public float moveSpeed = 1f;
+    
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
 
     }
@@ -19,5 +20,4 @@ public class MF01 : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
     }
-
 }

@@ -7,6 +7,7 @@ TagManager:
   - ground
   - enemy
   - clickable
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -41,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1749649665
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

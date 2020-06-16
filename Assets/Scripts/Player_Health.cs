@@ -16,7 +16,7 @@ public class Player_Health : MonoBehaviour {
     }
 
     void Die () {
-        SceneManager.LoadScene ("SemesterProject_01");
+        SceneManager.LoadScene ("TutorialLevel");
 
     }
 }
