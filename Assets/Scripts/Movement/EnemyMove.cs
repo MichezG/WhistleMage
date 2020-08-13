@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour {
 
@@ -14,8 +15,9 @@ public class EnemyMove : MonoBehaviour {
         gameObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (XMoveDirection, 0) * EnemySpeed;     
         if (hit.distance < 0.7f) {       
             Flip();
-            if (hit.collider.tag == "Player") {
-            Destroy(hit.collider.gameObject);   
+            if (hit.collider.tag == "Player") 
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }        
         }
   }
